@@ -1,0 +1,50 @@
+// projects styles
+
+
+.project {
+  margin: 50px 0 70px;
+
+  img {
+    margin-top: 20px;
+  }
+}
+
+.projectContainer {
+  @include bp(sm) {
+    display: flex;
+  }
+
+  img {
+    @include bp(sm) {
+      flex-basis: 60%;
+      margin-right: 35px;
+    }
+  }
+}
+
+.projectContent {
+  @include bp(sm) {
+    flex-basis: 40%;
+  }
+}
+
+.progLanguages {
+  margin-bottom: 0;
+
+  & + p {
+    margin-top: 15px;
+  }
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba($white, 0.2), rgba($white, 0.2));
+}

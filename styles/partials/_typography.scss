@@ -1,0 +1,102 @@
+// typography
+
+// headings
+
+body,
+a {
+  font-size: 125%;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+.logo {
+  font-family: $sansSerif;
+}
+
+
+h1,
+h2,
+h3,
+.logo {
+  font-weight: 700;
+}
+
+h1, 
+.dev,
+nav,
+.subTitle,
+a {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.4rem;
+  letter-spacing: 3px;
+
+  @include bp(sm) {
+    font-size: 5.0rem;
+    line-height: 0.8;
+  }
+}
+
+h2 {
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p,
+a {
+  line-height: 1.5;
+  font-size: 1.0rem;
+}
+
+p, 
+.subTitle {
+  color: $darkGray;
+}
+
+
+
+.subTitle {
+  margin: 7px 0 20px;
+  font-size: 0.8rem;
+  font-family: $serif;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  font-family: $sansSerif;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.dev {
+  margin-top: 0;
+  font-family: $cursive;
+  font-size: 2.2rem;
+  line-height: 1.0;
+  color: $white;
+
+  @include bp(sm) {
+    color: $black;
+    font-size: 2.6rem;
+  }
+}

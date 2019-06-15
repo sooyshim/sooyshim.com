@@ -1,0 +1,48 @@
+// variables
+
+// colors
+$black: #1D2731;
+$white: #F4F4F4;
+$gold: #C0B283;
+$paleGold:#DCD0C0;
+$gray: #D9D9D9;
+$darkGray: #696969;
+
+// typefaces
+$serif: 'Merriweather', serif;
+$sansSerif: 'Montserrat', sans-serif;
+$cursive:'Shadows Into Light', cursive;
+
+// Variables for media query
+$bp-sm: 768px;
+$bp-md: 760px;
+$bp-lg: 960px; 
+$bp-xlg: 1200px; 
+$bp-xxl: 1440px;
+
+// Mixin for media query
+@mixin bp($class) {
+  @if $class == sm {
+    @media (min-width: $bp-sm) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: $bp-md) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: $bp-lg) { @content; }
+  }
+
+  @else if $class == xlg {
+    @media (min-width: $bp-xlg) { @content; }
+  }
+
+  @else if $class == xxl {
+    @media (min-width: $bp-xxl) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xlg, xxl";
+  }
+}

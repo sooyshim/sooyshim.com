@@ -1,0 +1,23 @@
+// contact styles
+
+input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+input[type=text],
+input[type=email],
+input[type=textarea] {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $darkGray;
+
+  &::placeholder {
+    text-transform: capitalize;
+    font-size: 1.0rem;
+  }
+}
+
+input[type=textarea] {
+  padding-bottom: 150px;
+}

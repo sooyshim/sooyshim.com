@@ -1,0 +1,61 @@
+// base styles
+
+body {
+  background-color: $white;
+}
+
+.wrapper {
+  width: 97%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 70px 0;
+
+  @include bp(sm) {
+    margin: 100px 0;
+  }
+  
+}
+
+.aboutMe {
+  margin-top: 100px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+i {
+  display: block;
+}
+
+p {
+  margin: 25px 0;
+}
+
+.logo {
+  text-align: center;
+}
+
+// buttons
+
+.links {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    flex-basis: 45%;
+    min-width: 70px;
+    padding: 5px;
+    background-color: $black;
+    color: $white;
+  }
+}
