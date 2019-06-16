@@ -1,10 +1,30 @@
 // contact styles
 
+.formTop {
+  @include bp(sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nameInput,
+.emailInput {
+  @include bp(sm) {
+    flex-basis: 50%;
+  }
+}
+
+.nameInput {
+  margin-right: 30px;
+}
+
+
 input {
   background-color: transparent;
   border: none;
   width: 100%;
 }
+
 input[type=text],
 input[type=email],
 input[type=textarea] {
@@ -21,3 +41,4 @@ input[type=textarea] {
 input[type=textarea] {
   padding-bottom: 150px;
 }
+

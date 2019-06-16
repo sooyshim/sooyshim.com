@@ -8,6 +8,10 @@ body {
   width: 97%;
   max-width: 1440px;
   margin: 0 auto;
+
+  @include bp(md) {
+    width: 90%;
+  }
 }
 
 section {

@@ -17,5 +17,13 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sooyshim/newRepoo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sooyshim/newRepoo/issues"
+  },
+  "homepage": "https://github.com/sooyshim/newRepoo#readme",
   "description": ""
 }
