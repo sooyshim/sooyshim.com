@@ -1,5 +1,13 @@
 // contact styles
 
+form {
+  margin-top: 50px;
+
+  @include bp(md) {
+    margin-top: 70px;
+  }
+}
+
 .formTop {
   @include bp(sm) {
     display: flex;

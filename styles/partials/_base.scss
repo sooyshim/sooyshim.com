@@ -1,31 +1,58 @@
 // base styles
 
-body {
-  background-color: $white;
+html {
+  scroll-behavior: smooth;
 }
 
-.wrapper {
-  width: 97%;
-  max-width: 1440px;
-  margin: 0 auto;
+body {
+  background-color: $white;
+  margin: 0;
 
   @include bp(md) {
-    width: 90%;
+    display: flex;
   }
 }
 
 section {
-  margin: 70px 0;
+  margin: 90px 0;
 
   @include bp(sm) {
-    margin: 100px 0;
+    margin: 150px 0;
+  }
+
+  @include bp(md) {
+    margin: 170px 0;
+  }
+
+  @include bp(lg) {
+    margin: 190px 0;
   }
   
 }
 
-.aboutMe {
-  margin-top: 100px;
+.leftContainer {
+  display: none;
+
+  @include bp(md) {
+    background-color: $gray;
+    display: flex;
+    flex-basis: 17%;
+  }
 }
+
+.rightContainer {
+  @include bp(md) {
+    flex-basis: 83%;
+  }
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
 
 ul {
   margin: 0;
@@ -45,10 +72,6 @@ p {
   margin: 25px 0;
 }
 
-.logo {
-  text-align: center;
-}
-
 // buttons
 
 .links {
@@ -59,7 +82,19 @@ p {
     flex-basis: 45%;
     min-width: 70px;
     padding: 5px;
-    background-color: $black;
-    color: $white;
   }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hamburger,
+.close,
+li {
+  cursor: pointer;
 }

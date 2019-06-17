@@ -1,17 +1,6 @@
 // about me styles
 
 .aboutMe {
-  .wrapper {
-    @include bp(sm) {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-    }
-
-    @include bp(md) {
-      width: 80%;
-    }
-  }
 
   img {
     @include bp(sm) {
@@ -29,27 +18,27 @@
 
 .aboutMeContainer {
   @include bp(sm) {
-    flex-basis: 70%;
-    padding-left: 120px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
   }
 
   @include bp(md) {
-    flex-basis: 60%;
+    margin-top: 70px;
+  }
+
+
+  img {
+    @include bp(sm) {
+      flex-basis: 30%;
+    }
   }
 }
 
-.aboutMeTitle {
+.aboutMe p {
   @include bp(sm) {
-    white-space: nowrap;
-    transform: rotate(-90deg);
-    transform-origin: top right 0;
-    position: absolute;
-    right: 100%;
+    flex-basis: 70%;
+    margin: 0;
   }
-}
 
-
-.aboutMeText {
-  margin: 0;
 }

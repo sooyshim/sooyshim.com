@@ -16,9 +16,9 @@ $cursive:'Shadows Into Light', cursive;
 // Variables for media query
 $bp-sm: 768px;
 $bp-md: 960px;
-$bp-lg: 1060px; 
-$bp-xlg: 1200px; 
-$bp-xxl: 1440px;
+$bp-lg: 1150px; 
+$bp-xlg: 1420px; 
+$bp-xxl: 1620px;
 
 // Mixin for media query
 @mixin bp($class) {

@@ -2,111 +2,108 @@
 
 
 .project {
-  margin: 50px 0 70px;
+  margin: 70px 0 0;
 
   @include bp(sm) {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
+    margin: 100px 0 0;
 
     &:first-of-type {
-      margin-top: 100px;
+      margin: 50px 0 0;
     }
   }
 
-  @include bp(md) {
-    margin: 0;
-  }
+  @include bp(lg) {
+    margin: 120px 0 0;
 
-  img {
-    margin-top: 20px;
+    &:first-of-type {
+      margin: 70px 0 0;
+    }
+ 
+  }
+}
+
+.projectImg {
+  position: relative;
+  margin-top: 20px;
 
     @include bp(sm) {
       margin: 0;
       margin-right: 30px;
-      flex-basis: 40%;
+      flex-basis: 60%;
     }
 
     @include bp(md) {
-      margin: 0;
-      flex-basis: 50%;
+      flex-basis: 55%;
     }
   }
-}
 
 .projectContainer {
   @include bp(sm) {
-    flex-basis: 50%;
+    flex-basis: 40%;
   }
 
   @include bp(md) {
-    flex-basis: 50%;
-    position: relative;
-    padding: 100px 0;
+    flex-basis: 45%;
   }
+
 
   h3 {
     @include bp(sm) {
       margin: 0;
     }
   }
-
-  p:last-of-type {
-    @include bp(md) {
-      margin: 30px 0;
-    }
-  }
 }
 
-.projectTitle {
+.projectContent {
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $darkGray;
+    display: block;
+  }
+
+}
+
+.description {
+  margin-bottom: 15px;
+  
   @include bp(md) {
-    white-space: nowrap;
-    transform: rotate(-90deg);
-    transform-origin: top right 0;
-    position: absolute;
+    margin-top: 20px;
+  }
+
+  @include bp(lg) {
+    margin-top: 40px;
   }
 }
 
-.project:nth-child(odd) {
-  @include bp(md) {
-    flex-direction: row-reverse;
-
-    .projectContainer {
-      margin-right: 70px;
-      padding-right: 50px;
-    }
-
-    .projectTitle {
-      right: 0;
-    }
-  }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-
-
-.project:nth-child(even) {
-  @include bp(md) {
-    .projectContainer {
-      margin-left: 50px;
-      padding-left: 70px;
-    }
-
-    .projectTitle {
-      right: 100%;
-    }
-  }
-}
-
-
 
 .progLanguages {
-  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
 
-  @include bp(md) {
-    margin: 0;
-  }
-
-  & + p {
-    margin-top: 15px;
+  @include bp(sm) {
+    margin: 15px 0;
   }
 }
 
+.progLanguages li {
+  border: 1px solid $darkGray;
+  color: $darkGray;
+  padding: 6px;
+  margin: 3px 3px 3px 0;
+}
+
+.links {
+  margin-top: 10px;
+}
