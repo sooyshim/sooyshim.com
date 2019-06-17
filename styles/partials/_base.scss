@@ -98,3 +98,56 @@ p {
 li {
   cursor: pointer;
 }
+
+input[type=submit] {
+  color: blue;
+}
+
+.socialMedia a,
+.links a ,
+.submit {
+  position: relative;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: $darkGray;
+    transform: scaleY(0);
+    transition: transform 0.5s ease;
+  }
+  
+  &::before {
+    left: 100%;
+    transform-origin: center top;
+  }
+  
+  &:hover::before {
+    transform-origin: center bottom;
+    transform: scaleY(1);
+  }
+  
+  &::after {
+    right: 100%;
+    transform-origin: center bottom;
+  }
+  
+  &:hover::after {
+    transform-origin: center top;
+    transform: scaleY(1);
+  }  
+}
+
+.submit {
+  &::before {
+    left: 80%;
+    transform-origin: center top;
+  }
+
+  &::after {
+    right: 80%;
+    transform-origin: center bottom;
+  }
+}

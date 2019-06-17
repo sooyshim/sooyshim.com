@@ -170,3 +170,11 @@ input[type=submit] {
 .progLanguages li {
   font-size: 1.0rem;
 }
+
+.socialMedia a {
+  font-size: 1.3rem;
+
+  @include bp(md) {
+    font-size: 1.4rem;
+  }
+}

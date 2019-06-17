@@ -75,23 +75,49 @@ nav {
 
   li {
     margin: 30px 0;
+    position: relative;
 
-    &:after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: $gray;
-      margin-top: 5px;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $darkGray;
+      transform: scaleX(0);
+      transition: transform 0.7s ease;
     }
+    
+    &::before {
+      top: -5px;
+      transform-origin: center right;
+    }
+    
+    &:hover::before {
+      transform-origin: center left;
+      transform: scaleX(1);
+    }
+    
+    &::after {
+      bottom: -5px;
+      transform-origin: center left;
+    }
+    
+    &:hover::after {
+      transform-origin: center right;
+      transform: scaleX(1);
+    }  
 
+    
     @include bp(md) {
       margin: 20px 0;
       width: 100%;
+      position: relative;
+    }
 
-      &::after {
-        display: none;
-      }
+    &:first-of-type::before,
+    &:first-of-type::after {
+      display: none;
     }
   }
 
@@ -151,6 +177,7 @@ nav {
     flex-basis: 25%;
     padding: 0 3%;
   }
+
 }
 
 .headerContainer {

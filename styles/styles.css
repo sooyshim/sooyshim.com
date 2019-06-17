@@ -244,6 +244,55 @@ p {
 li {
   cursor: pointer; }
 
+input[type=submit] {
+  color: blue; }
+
+.socialMedia a,
+.links a,
+.submit {
+  position: relative; }
+  .socialMedia a::before, .socialMedia a::after,
+  .links a::before,
+  .links a::after,
+  .submit::before,
+  .submit::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #696969;
+    transform: scaleY(0);
+    transition: transform 0.5s ease; }
+  .socialMedia a::before,
+  .links a::before,
+  .submit::before {
+    left: 100%;
+    transform-origin: center top; }
+  .socialMedia a:hover::before,
+  .links a:hover::before,
+  .submit:hover::before {
+    transform-origin: center bottom;
+    transform: scaleY(1); }
+  .socialMedia a::after,
+  .links a::after,
+  .submit::after {
+    right: 100%;
+    transform-origin: center bottom; }
+  .socialMedia a:hover::after,
+  .links a:hover::after,
+  .submit:hover::after {
+    transform-origin: center top;
+    transform: scaleY(1); }
+
+.submit::before {
+  left: 80%;
+  transform-origin: center top; }
+
+.submit::after {
+  right: 80%;
+  transform-origin: center bottom; }
+
 body,
 a {
   font-size: 125%;
@@ -382,6 +431,12 @@ input[type=submit] {
 .progLanguages li {
   font-size: 1.0rem; }
 
+.socialMedia a {
+  font-size: 1.3rem; }
+  @media (min-width: 960px) {
+    .socialMedia a {
+      font-size: 1.4rem; } }
+
 header {
   position: relative;
   height: 95vh; }
@@ -442,20 +497,36 @@ header {
       padding: 0;
       width: 100%; } }
   .topNavList li {
-    margin: 30px 0; }
-    .topNavList li:after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: #D9D9D9;
-      margin-top: 5px; }
+    margin: 30px 0;
+    position: relative; }
+    .topNavList li::before, .topNavList li::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #696969;
+      transform: scaleX(0);
+      transition: transform 0.7s ease; }
+    .topNavList li::before {
+      top: -5px;
+      transform-origin: center right; }
+    .topNavList li:hover::before {
+      transform-origin: center left;
+      transform: scaleX(1); }
+    .topNavList li::after {
+      bottom: -5px;
+      transform-origin: center left; }
+    .topNavList li:hover::after {
+      transform-origin: center right;
+      transform: scaleX(1); }
     @media (min-width: 960px) {
       .topNavList li {
         margin: 20px 0;
-        width: 100%; }
-        .topNavList li::after {
-          display: none; } }
+        width: 100%;
+        position: relative; } }
+    .topNavList li:first-of-type::before, .topNavList li:first-of-type::after {
+      display: none; }
   .topNavList a {
     color: #F4F4F4; }
     @media (min-width: 960px) {
