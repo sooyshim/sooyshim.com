@@ -80,6 +80,7 @@ button {
   border: none;
   margin: 0;
   padding: 0;
+  background-color: transparent;
 }
 
 .links {
@@ -97,6 +98,10 @@ button,
 .close,
 li {
   cursor: pointer;
+}
+
+.close {
+  color: $white;
 }
 
 .hamburger:hover,
