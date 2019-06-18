@@ -3,6 +3,10 @@
 header  {
   position: relative;
   height: 95vh;
+
+  @include hbp(sm) {
+    height: auto;
+  }
   
   @include bp(md) {
     display: flex;

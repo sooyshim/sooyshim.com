@@ -179,6 +179,9 @@ body {
     body {
       display: flex; } }
 
+main {
+  margin-top: 70px; }
+
 section {
   margin: 90px 0; }
   @media (min-width: 768px) {
@@ -456,6 +459,9 @@ input[type=submit] {
 header {
   position: relative;
   height: 95vh; }
+  @media (min-height: 1100px) {
+    header {
+      height: auto; } }
   @media (min-width: 960px) {
     header {
       display: flex;

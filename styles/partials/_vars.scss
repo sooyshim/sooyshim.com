@@ -21,7 +21,6 @@ $bp-sm: 768px;
 $bp-md: 960px;
 $bp-lg: 1150px; 
 $bp-xlg: 1420px; 
-$bp-xxl: 1620px;
 
 // Mixin for media query
 @mixin bp($class) {
@@ -41,11 +40,19 @@ $bp-xxl: 1620px;
     @media (min-width: $bp-xlg) { @content; }
   }
 
-  @else if $class == xxl {
-    @media (min-width: $bp-xxl) { @content; }
+  @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xlg";
+  }
+}
+
+// height media query
+@mixin hbp($class) {
+  @if $class == sm {
+    @media (min-height: 1100px) { @content; }
   }
 
   @else {
-    @warn "Breakpoint mixin supports: sm, md, lg, xlg, xxl";
+    @warn "Breakpoint mixin for height supports: sm";
   }
+    
 }
