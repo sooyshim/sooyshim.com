@@ -233,27 +233,21 @@ p {
     min-width: 70px;
     padding: 5px; }
 
-.show {
-  display: block; }
-
-.hide {
-  display: none; }
-
 .hamburger,
 .close,
 li {
   cursor: pointer; }
 
-input[type=submit] {
-  color: blue; }
+.hamburger:hover,
+.hamburger:focus,
+.close:hover span,
+.close:focus span {
+  transform: scale(1.2); }
 
-.socialMedia a,
 .links a,
 .submit {
   position: relative; }
-  .socialMedia a::before, .socialMedia a::after,
-  .links a::before,
-  .links a::after,
+  .links a::before, .links a::after,
   .submit::before,
   .submit::after {
     content: '';
@@ -263,35 +257,42 @@ input[type=submit] {
     width: 2px;
     background-color: #696969;
     transform: scaleY(0);
-    transition: transform 0.5s ease; }
-  .socialMedia a::before,
+    transition: transform 0.5s ease-in-out; }
   .links a::before,
   .submit::before {
-    left: 100%;
-    transform-origin: center top; }
-  .socialMedia a:hover::before,
+    left: -1%;
+    transform-origin: center center; }
   .links a:hover::before,
   .submit:hover::before {
-    transform-origin: center bottom;
+    transform-origin: center center;
     transform: scaleY(1); }
-  .socialMedia a::after,
   .links a::after,
   .submit::after {
-    right: 100%;
-    transform-origin: center bottom; }
-  .socialMedia a:hover::after,
+    right: -1%;
+    transform-origin: center center; }
   .links a:hover::after,
   .submit:hover::after {
-    transform-origin: center top;
+    transform-origin: center center;
     transform: scaleY(1); }
 
 .submit::before {
-  left: 80%;
-  transform-origin: center top; }
+  left: 80%; }
 
 .submit::after {
-  right: 80%;
-  transform-origin: center bottom; }
+  right: 80%; }
+
+.socialMedia a:active,
+.links a:active,
+input[type=submit]:active {
+  background-color: #D9D9D9; }
+
+input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  width: 60%; }
+
+.hide {
+  display: none; }
 
 body,
 a {
@@ -321,7 +322,6 @@ input[type=submit] {
   text-transform: uppercase; }
 
 h1,
-h3,
 nav {
   letter-spacing: 3px; }
 
@@ -340,8 +340,11 @@ h1 {
     h1 {
       font-size: 5.5rem; } }
 
+h2,
+h3 {
+  letter-spacing: 2px; }
+
 h2 {
-  letter-spacing: 2px;
   font-size: 2.0rem;
   margin-bottom: 0; }
   @media (min-width: 960px) {
@@ -356,13 +359,19 @@ h3 {
   margin: 15px 0;
   font-weight: 600;
   line-height: 1.2; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: 1px; } }
   @media (min-width: 960px) {
     h3 {
-      font-size: 1.5rem; } }
+      font-size: 1.8rem; } }
 
-@media (min-width: 1150px) {
-  .progLanguages {
-    font-size: 1.1rem; } }
+.langTools {
+  font-size: 0.9rem; }
+  @media (min-width: 960px) {
+    .langTools {
+      font-size: 1.0rem; } }
 
 p,
 a,
@@ -386,7 +395,7 @@ p {
       font-size: 1.1rem; } }
 
 .subTitle {
-  margin: 15px 0;
+  margin: 5px 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
   font-style: italic; }
@@ -499,27 +508,6 @@ header {
   .topNavList li {
     margin: 30px 0;
     position: relative; }
-    .topNavList li::before, .topNavList li::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: #696969;
-      transform: scaleX(0);
-      transition: transform 0.7s ease; }
-    .topNavList li::before {
-      top: -5px;
-      transform-origin: center right; }
-    .topNavList li:hover::before {
-      transform-origin: center left;
-      transform: scaleX(1); }
-    .topNavList li::after {
-      bottom: -5px;
-      transform-origin: center left; }
-    .topNavList li:hover::after {
-      transform-origin: center right;
-      transform: scaleX(1); }
     @media (min-width: 960px) {
       .topNavList li {
         margin: 20px 0;
@@ -568,6 +556,47 @@ header {
   .socialMedia li {
     flex-basis: 25%;
     padding: 0 3%; }
+
+.topNavList li,
+.socialMedia a {
+  position: relative; }
+  .topNavList li::before, .topNavList li::after,
+  .socialMedia a::before,
+  .socialMedia a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #696969;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out; }
+  .topNavList li::before,
+  .socialMedia a::before {
+    top: -5px;
+    transform-origin: center right; }
+  .topNavList li:hover::before,
+  .socialMedia a:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1); }
+  .topNavList li::after,
+  .socialMedia a::after {
+    bottom: -5px;
+    transform-origin: center right; }
+  .topNavList li:hover::after,
+  .socialMedia a:hover::after {
+    transform-origin: center left;
+    transform: scaleX(1); }
+  .topNavList li:active,
+  .socialMedia a:active {
+    background-color: #696969; }
+  .topNavList li:active a,
+  .socialMedia a:active a {
+    color: #F4F4F4;
+    font-weight: normal; }
+
+.socialMedia a::before, .socialMedia a::after {
+  width: 80%; }
 
 .headerContainer {
   width: 100%;
@@ -656,19 +685,22 @@ h1,
     flex-basis: 40%;
     margin-right: 40px; } }
 
-@media (min-width: 768px) {
-  .aboutMeContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px; } }
-
-@media (min-width: 960px) {
-  .aboutMeContainer {
-    margin-top: 70px; } }
-
-@media (min-width: 768px) {
-  .aboutMeContainer img {
-    flex-basis: 30%; } }
+.aboutMeContainer {
+  margin-top: 50px; }
+  @media (min-width: 768px) {
+    .aboutMeContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px; } }
+  @media (min-width: 960px) {
+    .aboutMeContainer {
+      margin-top: 70px; } }
+  @media (min-width: 1150px) {
+    .aboutMeContainer {
+      margin-top: 90px; } }
+  @media (min-width: 768px) {
+    .aboutMeContainer img {
+      flex-basis: 30%; } }
 
 @media (min-width: 768px) {
   .aboutMe p {
@@ -676,7 +708,7 @@ h1,
     margin: 0; } }
 
 .project {
-  margin: 70px 0 0; }
+  margin: 50px 0 0; }
   @media (min-width: 768px) {
     .project {
       display: flex;
@@ -684,11 +716,16 @@ h1,
       margin: 100px 0 0; }
       .project:first-of-type {
         margin: 50px 0 0; } }
-  @media (min-width: 1150px) {
+  @media (min-width: 960px) {
     .project {
       margin: 120px 0 0; }
       .project:first-of-type {
         margin: 70px 0 0; } }
+  @media (min-width: 1150px) {
+    .project {
+      margin: 150px 0 0; }
+      .project:first-of-type {
+        margin: 90px 0 0; } }
 
 .projectImg {
   position: relative;
@@ -723,32 +760,30 @@ h1,
 
 .description {
   margin-bottom: 15px; }
-  @media (min-width: 960px) {
+  @media (min-width: 768px) {
     .description {
-      margin-top: 20px; } }
-  @media (min-width: 1150px) {
-    .description {
-      margin-top: 40px; } }
+      margin: 20px 0; } }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-
-.progLanguages {
+.langTools {
   display: flex;
   flex-wrap: wrap; }
   @media (min-width: 768px) {
-    .progLanguages {
-      margin: 15px 0; } }
+    .langTools {
+      margin: 20px 0; } }
 
-.progLanguages li {
+.langTools li {
   border: 1px solid #696969;
   color: #696969;
   padding: 6px;
   margin: 3px 3px 3px 0; }
+  @media (min-width: 768px) {
+    .langTools li {
+      margin: 5px 5px 3px 0;
+      padding: 7px; } }
+  @media (min-width: 960px) {
+    .langTools li {
+      margin: 7px 7px 5px 0;
+      padding: 8px; } }
 
 .links {
   margin-top: 10px; }
@@ -804,8 +839,9 @@ form {
   .emailInput {
     flex-basis: 50%; } }
 
-.nameInput {
-  margin-right: 30px; }
+@media (min-width: 768px) {
+  .nameInput {
+    margin-right: 30px; } }
 
 input {
   background-color: transparent;
@@ -817,12 +853,23 @@ input[type=email],
 input[type=textarea] {
   margin-bottom: 20px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #696969; }
+  padding-left: 5px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #696969;
+  transition: border 0.5s ease-in-out; }
   input[type=text]::placeholder,
   input[type=email]::placeholder,
   input[type=textarea]::placeholder {
     text-transform: capitalize;
     font-size: 1.0rem; }
+  input[type=text]:focus,
+  input[type=email]:focus,
+  input[type=textarea]:focus {
+    border-left: 1px solid #696969; }
+  input[type=text]:active,
+  input[type=email]:active,
+  input[type=textarea]:active {
+    border: 1px solid #696969; }
 
 input[type=textarea] {
   padding-bottom: 150px; }

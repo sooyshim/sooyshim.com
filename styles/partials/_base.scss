@@ -1,5 +1,4 @@
 // base styles
-
 html {
   scroll-behavior: smooth;
 }
@@ -27,9 +26,10 @@ section {
   @include bp(lg) {
     margin: 190px 0;
   }
-  
+ 
 }
 
+//gray area on the left on desktop view
 .leftContainer {
   display: none;
 
@@ -40,6 +40,7 @@ section {
   }
 }
 
+//body content container
 .rightContainer {
   @include bp(md) {
     flex-basis: 83%;
@@ -52,8 +53,7 @@ section {
   margin: 0 auto;
 }
 
-
-
+//undo defaults
 ul {
   margin: 0;
   padding: 0;
@@ -73,7 +73,6 @@ p {
 }
 
 // buttons
-
 .links {
   display: flex;
   justify-content: space-between;
@@ -85,25 +84,19 @@ p {
   }
 }
 
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
 .hamburger,
 .close,
 li {
   cursor: pointer;
 }
 
-input[type=submit] {
-  color: blue;
+.hamburger:hover,
+.hamburger:focus,
+.close:hover span,
+.close:focus span { 
+  transform: scale(1.2);
 }
 
-.socialMedia a,
 .links a ,
 .submit {
   position: relative;
@@ -116,38 +109,56 @@ input[type=submit] {
     width: 2px;
     background-color: $darkGray;
     transform: scaleY(0);
-    transition: transform 0.5s ease;
+    transition: transform $transition;
   }
   
   &::before {
-    left: 100%;
-    transform-origin: center top;
+    left: -1%;
+    transform-origin: center center;
   }
   
   &:hover::before {
-    transform-origin: center bottom;
+    transform-origin: center center;
     transform: scaleY(1);
   }
   
   &::after {
-    right: 100%;
-    transform-origin: center bottom;
+    right: -1%;
+    transform-origin: center center;
   }
   
   &:hover::after {
-    transform-origin: center top;
+    transform-origin: center center;
     transform: scaleY(1);
   }  
+  
 }
 
+
 .submit {
+
   &::before {
     left: 80%;
-    transform-origin: center top;
   }
 
   &::after {
     right: 80%;
-    transform-origin: center bottom;
   }
+}
+
+.socialMedia a:active,
+.links a:active,
+input[type=submit]:active {
+  background-color: $gray;
+}
+
+input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+// toggle display
+.hide {
+  display: none;
 }

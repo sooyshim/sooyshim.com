@@ -17,6 +17,8 @@
 }
 
 .aboutMeContainer {
+  margin-top: 50px;
+
   @include bp(sm) {
     display: flex;
     justify-content: space-between;
@@ -27,6 +29,9 @@
     margin-top: 70px;
   }
 
+  @include bp(lg) {
+    margin-top: 90px;
+  }
 
   img {
     @include bp(sm) {

@@ -2,7 +2,7 @@
 
 
 .project {
-  margin: 70px 0 0;
+  margin: 50px 0 0;
 
   @include bp(sm) {
     display: flex;
@@ -14,13 +14,20 @@
     }
   }
 
-  @include bp(lg) {
+  @include bp(md) {
     margin: 120px 0 0;
 
     &:first-of-type {
       margin: 70px 0 0;
     }
- 
+  }
+
+  @include bp(lg) {
+    margin: 150px 0 0;
+
+    &:first-of-type {
+      margin: 90px 0 0;
+    }
   }
 }
 
@@ -48,7 +55,6 @@
     flex-basis: 45%;
   }
 
-
   h3 {
     @include bp(sm) {
       margin: 0;
@@ -70,38 +76,38 @@
 
 .description {
   margin-bottom: 15px;
-  
-  @include bp(md) {
-    margin-top: 20px;
+
+  @include bp(sm) {
+    margin: 20px 0;
   }
 
-  @include bp(lg) {
-    margin-top: 40px;
-  }
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.progLanguages {
+.langTools {
   display: flex;
   flex-wrap: wrap;
 
   @include bp(sm) {
-    margin: 15px 0;
+    margin: 20px 0;
   }
+
 }
 
-.progLanguages li {
+.langTools li {
   border: 1px solid $darkGray;
   color: $darkGray;
   padding: 6px;
   margin: 3px 3px 3px 0;
+
+  @include bp(sm) {
+    margin: 5px 5px 3px 0;
+    padding: 7px;
+  }
+
+  @include bp(md) {
+    margin: 7px 7px 5px 0;
+    padding: 8px;
+  }
 }
 
 .links {

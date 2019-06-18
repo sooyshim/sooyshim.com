@@ -6,6 +6,7 @@ form {
   @include bp(md) {
     margin-top: 70px;
   }
+
 }
 
 .formTop {
@@ -23,7 +24,9 @@ form {
 }
 
 .nameInput {
-  margin-right: 30px;
+  @include bp(sm) {
+    margin-right: 30px;
+  }
 }
 
 
@@ -38,11 +41,22 @@ input[type=email],
 input[type=textarea] {
   margin-bottom: 20px;
   padding-bottom: 5px;
+  padding-left: 5px;
+  border: 1px solid transparent;
   border-bottom: 1px solid $darkGray;
+  transition: border $transition;
 
   &::placeholder {
     text-transform: capitalize;
     font-size: 1.0rem;
+  }
+
+  &:focus {
+    border-left: 1px solid $darkGray;
+  }
+
+  &:active {
+    border: 1px solid $darkGray;
   }
 }
 
