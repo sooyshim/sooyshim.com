@@ -1,7 +1,7 @@
 // base styles
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   background-color: $white;
@@ -27,6 +27,11 @@ section {
     margin: 190px 0;
   }
  
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
 }
 
 //gray area on the left on desktop view
@@ -160,4 +165,8 @@ input[type=submit] {
 // toggle display
 .hide {
   display: none;
+}
+
+.fadeIn {
+  opacity: 0;
 }

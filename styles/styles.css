@@ -172,9 +172,6 @@ textarea {
   clip: rect(0 0 0);
   overflow: hidden; }
 
-html {
-  scroll-behavior: smooth; }
-
 body {
   background-color: #F4F4F4;
   margin: 0; }
@@ -193,6 +190,10 @@ section {
   @media (min-width: 1150px) {
     section {
       margin: 190px 0; } }
+
+input:focus,
+textarea:focus {
+  outline: none; }
 
 .leftContainer {
   display: none; }
@@ -293,6 +294,9 @@ input[type=submit] {
 
 .hide {
   display: none; }
+
+.fadeIn {
+  opacity: 0; }
 
 body,
 a {
@@ -824,7 +828,8 @@ h1,
     transform: translate(-50%, -50%); }
 
 form {
-  margin-top: 50px; }
+  margin-top: 50px;
+  transition: opacity 0.5s ease-in-out; }
   @media (min-width: 960px) {
     form {
       margin-top: 70px; } }
@@ -851,7 +856,7 @@ input {
 input[type=text],
 input[type=email],
 input[type=textarea] {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-bottom: 5px;
   padding-left: 5px;
   border: 1px solid transparent;
@@ -873,3 +878,26 @@ input[type=textarea] {
 
 input[type=textarea] {
   padding-bottom: 150px; }
+
+.nameErrorMessage,
+.emailErrorMessage,
+.textareaErrorMessage {
+  margin: 5px 0;
+  padding: 3px 5px;
+  position: relative;
+  background-color: #D9D9D9;
+  color: maroon; }
+  .nameErrorMessage:after,
+  .emailErrorMessage:after,
+  .textareaErrorMessage:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: #D9D9D9;
+    border-top: 0;
+    margin-left: -15px;
+    margin-top: -15px; }

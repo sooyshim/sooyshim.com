@@ -246,19 +246,22 @@
         <div class="wrapper">
             <h2>Get in touch</h2>
             <p class="subTitle">Send a message</p>
-            <form action="https://formspree.io/sooyshim@gmail.com" method="POST"/>
+            <form action=""/>
               <div class="formTop">
                 <div class="nameInput">
                   <label for="name" class="visuallyHidden">Name</label>
                   <input type="text" id="name" name="name" placeholder="name">
+                  <p class="nameErrorMessage fadeIn">Please enter your name</p>
                 </div>
                 <div class="emailInput">
                   <label for="email" class="visuallyHidden">Email</label>
                   <input type="text" id="email" name="email" placeholder="email">
+                  <p class="emailErrorMessage fadeIn">Please enter a valid email</p>
                 </div>
               </div>
-            <label for="message" class="visuallyHidden">message</label>
-            <input type="textarea" id="message" name="message" placeholder="message">
+              <label for="message" class="visuallyHidden">message</label>
+              <input type="textarea" id="message" name="message" placeholder="message">
+              <p class="textareaErrorMessage fadeIn">Please enter your message</p>
             <div class="submit">
               <label for="submit" class="visuallyHidden">submit</label>
               <input type="submit" id="submit" name="submit" value="-send-">
@@ -269,6 +272,7 @@
   </main>
 </div>
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
   <script src="scripts.js"></script>
 
 </body>
