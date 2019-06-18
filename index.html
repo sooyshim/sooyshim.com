@@ -19,12 +19,14 @@
           <div class="logo topLogo">
             S
           </div>  
-          <img class="hamburger" src="./assets/hamburger.png" alt="">  
-          <div class="navContainer hide">    
+          <button class="hamburger">
+            <div class="topBar"></div>
+            <div class="bottomBar"></div>
+          </button>
+          <div class="navContainer">    
             <ul class="topNavList">
-              <li class="close">
-                <div class="logo">S</div>
-                <span>&times;</span>
+              <li>
+                <div class="close">&times;</div>
               </li>
               <li>
                 <a href="#aboutMe">About</a>
@@ -250,18 +252,18 @@
               <div class="formTop">
                 <div class="nameInput">
                   <label for="name" class="visuallyHidden">Name</label>
-                  <input type="text" id="name" name="name" placeholder="name">
-                  <p class="nameErrorMessage fadeIn">Please enter your name</p>
+                  <input type="text" id="name" name="name" placeholder="name" required>
+                  <p class="nameErrorMessage fade">Please enter your name</p>
                 </div>
                 <div class="emailInput">
                   <label for="email" class="visuallyHidden">Email</label>
-                  <input type="text" id="email" name="email" placeholder="email">
-                  <p class="emailErrorMessage fadeIn">Please enter a valid email</p>
+                  <input type="text" id="email" name="email" placeholder="email" required>
+                  <p class="emailErrorMessage fade">Please enter a valid email</p>
                 </div>
               </div>
               <label for="message" class="visuallyHidden">message</label>
-              <input type="textarea" id="message" name="message" placeholder="message">
-              <p class="textareaErrorMessage fadeIn">Please enter your message</p>
+              <input type="textarea" id="message" name="message" placeholder="message" required>
+              <p class="textareaErrorMessage fade">Please enter your message</p>
             <div class="submit">
               <label for="submit" class="visuallyHidden">submit</label>
               <input type="submit" id="submit" name="submit" value="-send-">

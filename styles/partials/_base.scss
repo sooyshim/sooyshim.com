@@ -1,7 +1,4 @@
 // base styles
-// html {
-//   scroll-behavior: smooth;
-// }
 
 body {
   background-color: $white;
@@ -78,6 +75,13 @@ p {
 }
 
 // buttons
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .links {
   display: flex;
   justify-content: space-between;
@@ -89,16 +93,14 @@ p {
   }
 }
 
-.hamburger,
+button,
 .close,
 li {
   cursor: pointer;
 }
 
 .hamburger:hover,
-.hamburger:focus,
-.close:hover span,
-.close:focus span { 
+.hamburger:focus { 
   transform: scale(1.2);
 }
 
@@ -167,6 +169,6 @@ input[type=submit] {
   display: none;
 }
 
-.fadeIn {
+.fade {
   opacity: 0;
 }
