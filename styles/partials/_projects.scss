@@ -44,6 +44,10 @@
     @include bp(md) {
       flex-basis: 55%;
     }
+
+    @include bp(lg) {
+      flex-basis: 50%;
+    }
   }
 
 .projectContainer {
@@ -53,6 +57,10 @@
 
   @include bp(md) {
     flex-basis: 45%;
+  }
+
+  @include bp(lg) {
+    flex-basis: 50%;
   }
 
   h3 {
