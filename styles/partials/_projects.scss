@@ -113,3 +113,10 @@
 .links {
   margin-top: 10px;
 }
+
+.friend {
+  &:hover {
+      color: $black;
+      font-weight: 600;
+   }
+}

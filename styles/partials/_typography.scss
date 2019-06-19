@@ -13,7 +13,9 @@ h2,
 h3,
 p,
 ul,
-.logo {
+.logo,
+a,
+input[type=submit] {
   font-family: $sansSerif;
 }
 
@@ -69,12 +71,9 @@ h2 {
   margin-bottom: 0;
 
   @include bp(md) {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
   }
 
-  @include bp(lg) {
-    font-size: 3.0rem;
-  }
 }
 
 h3 {
@@ -84,7 +83,7 @@ h3 {
   line-height: 1.2;
 
   @include bp(sm) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
   }
 
@@ -130,9 +129,10 @@ p {
   font-size: 0.8rem;
   font-family: $serif;
   font-style: italic;
+  letter-spacing: 1px;
 
   @include bp(md) {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin: 10px 0;
   }
 
@@ -142,7 +142,6 @@ a,
 input[type=submit] {
   text-decoration: none;
   color: $black;
-  font-family: $sansSerif;
   text-align: center;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -151,6 +150,13 @@ input[type=submit] {
     text-transform: uppercase;
     font-size: 1.1rem;
   }
+}
+
+.friend {
+  font-weight: normal;
+  color: $darkGray;
+  text-transform: none;
+  text-decoration: underline;
 }
 
 .dev {
@@ -186,5 +192,15 @@ input[type=submit] {
 
   @include bp(md) {
     font-size: 1.4rem;
+  }
+}
+
+.aboutMeContainer p {
+  @include bp(md) {
+    font-size: 1.1rem;
+  }
+
+  @include bp(md) {
+    font-size: 1.2rem;
   }
 }

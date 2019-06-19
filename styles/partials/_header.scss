@@ -55,10 +55,11 @@ nav {
   }
 
   @include bp(md) {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 100%;
-    margin-right: 3%;
+    // right: 100%;
+    left: 0;
+    margin-left: 2%;
     width: 12.5vw;
   }
 
@@ -78,12 +79,14 @@ nav {
   right: 100%;
   padding-left: 3%;
   transition: right $transition;
+  height: 80vh;
 
   @include bp(md) {
     background-color: transparent;
     display: block;
     position: static;
     padding: 60% 0;
+    height: auto;
   }
 }
 
@@ -139,7 +142,7 @@ nav {
   justify-content: space-between;
   align-self: flex-end;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 30px;
 
   @include bp(sm) {
     width: 30%;
@@ -147,11 +150,12 @@ nav {
   }
 
   @include bp(md) {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    right: 100%;
+    left: 0;
     width: 12.5vw;
-    margin-right: 3%;
+    margin-left: 2%;
+    margin-bottom: 1%;
   }
   
   li {
@@ -163,37 +167,6 @@ nav {
 .topNavList li,
 .socialMedia a {
   position: relative;
-  // &::before, &::after {
-  //   content: '';
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   height: 2px;
-  //   background-color: $darkGray;
-  //   transform: scaleX(0);
-  //   transition: transform $transition;
-  // }
-
-  // &::before {
-  //   top: -5px;
-  //   transform-origin: center right;
-  // }
-
-  // &:hover::before {
-  //   transform-origin: center left;
-  //   transform: scaleX(1);
-  // }
-  
-  // &::after {
-  //   bottom: -5px;
-  //   transform-origin: center right;
-  // }
-
-  // &:hover::after {
-  //   transform-origin: center left;
-  //   transform: scaleX(1);
-  // }  
-
   
   &::before {
     content: '';

@@ -179,6 +179,9 @@ body {
     body {
       display: flex; } }
 
+main {
+  position: relative; }
+
 section {
   margin: 90px 0; }
   @media (min-width: 768px) {
@@ -315,7 +318,9 @@ h2,
 h3,
 p,
 ul,
-.logo {
+.logo,
+a,
+input[type=submit] {
   font-family: "Montserrat", sans-serif; }
 
 h1,
@@ -360,10 +365,7 @@ h2 {
   margin-bottom: 0; }
   @media (min-width: 960px) {
     h2 {
-      font-size: 2.6rem; } }
-  @media (min-width: 1150px) {
-    h2 {
-      font-size: 3.0rem; } }
+      font-size: 3.2rem; } }
 
 h3 {
   font-size: 1.3rem;
@@ -372,7 +374,7 @@ h3 {
   line-height: 1.2; }
   @media (min-width: 768px) {
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       letter-spacing: 1px; } }
   @media (min-width: 960px) {
     h3 {
@@ -409,17 +411,17 @@ p {
   margin: 5px 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
-  font-style: italic; }
+  font-style: italic;
+  letter-spacing: 1px; }
   @media (min-width: 960px) {
     .subTitle {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
       margin: 10px 0; } }
 
 a,
 input[type=submit] {
   text-decoration: none;
   color: #1D2731;
-  font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 600;
   letter-spacing: 1.5px; }
@@ -428,6 +430,12 @@ input[type=submit] {
     input[type=submit] {
       text-transform: uppercase;
       font-size: 1.1rem; } }
+
+.friend {
+  font-weight: normal;
+  color: #696969;
+  text-transform: none;
+  text-decoration: underline; }
 
 .dev {
   margin-top: 0;
@@ -456,6 +464,14 @@ input[type=submit] {
   @media (min-width: 960px) {
     .socialMedia a {
       font-size: 1.4rem; } }
+
+@media (min-width: 960px) {
+  .aboutMeContainer p {
+    font-size: 1.1rem; } }
+
+@media (min-width: 960px) {
+  .aboutMeContainer p {
+    font-size: 1.2rem; } }
 
 header {
   position: relative;
@@ -500,10 +516,10 @@ header {
 
 @media (min-width: 960px) {
   nav {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 100%;
-    margin-right: 3%;
+    left: 0;
+    margin-left: 2%;
     width: 12.5vw; } }
 
 @media (min-width: 960px) {
@@ -518,13 +534,15 @@ header {
   top: 0;
   right: 100%;
   padding-left: 3%;
-  transition: right 0.5s ease-in-out; }
+  transition: right 0.5s ease-in-out;
+  height: 80vh; }
   @media (min-width: 960px) {
     .navContainer {
       background-color: transparent;
       display: block;
       position: static;
-      padding: 60% 0; } }
+      padding: 60% 0;
+      height: auto; } }
 
 .displayNav {
   right: 0; }
@@ -563,18 +581,19 @@ header {
   justify-content: space-between;
   align-self: flex-end;
   width: 100%;
-  margin-top: 15px; }
+  margin-top: 30px; }
   @media (min-width: 768px) {
     .socialMedia {
       width: 30%;
       padding-top: 50px; } }
   @media (min-width: 960px) {
     .socialMedia {
-      position: absolute;
+      position: fixed;
       bottom: 0;
-      right: 100%;
+      left: 0;
       width: 12.5vw;
-      margin-right: 3%; } }
+      margin-left: 2%;
+      margin-bottom: 1%; } }
   .socialMedia li {
     flex-basis: 25%;
     padding: 0 3%; }
@@ -798,6 +817,10 @@ h1,
 .links {
   margin-top: 10px; }
 
+.friend:hover {
+  color: #1D2731;
+  font-weight: 600; }
+
 .skillIcons {
   margin-top: 30px;
   display: grid;
@@ -892,3 +915,7 @@ input[type=textarea] {
   padding: 3px 5px;
   position: relative;
   color: #CD5C5C; }
+
+footer p {
+  text-align: right;
+  margin-right: 15px; }

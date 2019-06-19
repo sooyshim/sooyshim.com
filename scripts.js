@@ -26,6 +26,12 @@ portfolio.addScroll = () => {
   $("a").on("click", portfolio.smoothScroll());
 }
 
+portfolio.hideNavOnClick = () => {
+  $(".topNavList li").on("click", function() {
+    $(".navContainer").removeClass("displayNav");
+  })
+}
+
 // Form error handlers
 portfolio.validateEmailString = (email) => {
   const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -98,9 +104,10 @@ portfolio.clearForm = () => {
 
 // init
 portfolio.init = () => {
+  portfolio.addScroll();
   portfolio.displayNav();
   portfolio.hideNav();
-  portfolio.addScroll();
+  portfolio.hideNavOnClick();
   portfolio.validateForm();
   portfolio.clearErrorMessages();
   portfolio.clearForm();
