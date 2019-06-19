@@ -79,7 +79,7 @@ portfolio.validateForm = () => {
     portfolio.validateMessage();
 
     if (portfolio.validateEmail() && portfolio.validateName() && portfolio.validateMessage()) {
-      $("form").attr("action", "http://www.focuspocus.io/magic/sooyshim@gmail.com").attr("method", "POST");
+      $("form").attr("action", "https://www.focuspocus.io/magic/sooyshim@gmail.com").attr("method", "POST");
     } else {
       e.preventDefault();
     }

@@ -535,7 +535,7 @@ header {
   right: 100%;
   padding-left: 3%;
   transition: right 0.5s ease-in-out;
-  height: 80vh; }
+  height: 100vh; }
   @media (min-width: 960px) {
     .navContainer {
       background-color: transparent;

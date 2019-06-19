@@ -57,7 +57,6 @@ nav {
   @include bp(md) {
     position: fixed;
     top: 0;
-    // right: 100%;
     left: 0;
     margin-left: 2%;
     width: 12.5vw;
@@ -79,7 +78,7 @@ nav {
   right: 100%;
   padding-left: 3%;
   transition: right $transition;
-  height: 80vh;
+  height: 100vh;
 
   @include bp(md) {
     background-color: transparent;
