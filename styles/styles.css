@@ -194,6 +194,12 @@ section {
     section {
       margin: 190px 0; } }
 
+.aboutMe {
+  margin-top: 100px; }
+  @media (min-width: 768px) {
+    .aboutMe {
+      margin-top: 150px; } }
+
 input:focus,
 textarea:focus {
   outline: none; }
