@@ -195,10 +195,10 @@ section {
       margin: 190px 0; } }
 
 .aboutMe {
-  margin-top: 100px; }
-  @media (min-width: 768px) {
+  margin-top: 170px; }
+  @media (min-width: 1150px) {
     .aboutMe {
-      margin-top: 150px; } }
+      margin-top: 190px; } }
 
 input:focus,
 textarea:focus {
