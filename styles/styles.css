@@ -195,7 +195,13 @@ section {
       margin: 190px 0; } }
 
 .aboutMe {
-  margin-top: 170px; }
+  margin-top: 130px; }
+  @media (min-width: 768px) {
+    .aboutMe {
+      margin-top: 150px; } }
+  @media (min-width: 960px) {
+    .aboutMe {
+      margin-top: 170px; } }
   @media (min-width: 1150px) {
     .aboutMe {
       margin-top: 190px; } }

@@ -31,7 +31,15 @@ section {
 }
 
 .aboutMe {
-  margin-top: 170px;
+  margin-top: 130px;
+
+  @include bp(sm) {
+    margin-top: 150px;
+  }
+
+  @include bp(md) {
+    margin-top: 170px;
+  }
 
   @include bp(lg) {
     margin-top: 190px;
