@@ -65,6 +65,7 @@ nav {
   .wrapper {
     @include bp(md) {
       width: 100%;
+      height: 80vh;
     }
   }
 }
@@ -83,8 +84,9 @@ nav {
   @include bp(md) {
     background-color: transparent;
     display: block;
-    position: static;
-    padding: 60% 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     height: auto;
   }
 }

@@ -38,7 +38,8 @@
     @include bp(sm) {
       margin: 0;
       margin-right: 30px;
-      flex-basis: 60%;
+      width: 50%;
+      flex-basis: 40%;
     }
 
     @include bp(md) {
@@ -46,13 +47,13 @@
     }
 
     @include bp(lg) {
-      flex-basis: 50%;
+      flex-basis: 40%;
     }
   }
 
 .projectContainer {
   @include bp(sm) {
-    flex-basis: 40%;
+    flex-basis: 60%;
   }
 
   @include bp(md) {
@@ -60,7 +61,7 @@
   }
 
   @include bp(lg) {
-    flex-basis: 50%;
+    flex-basis: 60%;
   }
 
   h3 {
