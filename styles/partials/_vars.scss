@@ -1,17 +1,17 @@
 // variables
 
 // colors
-$black: #1D2731;
-$white: #F4F4F4;
-$gray: #D9D9D9;
+$black: #1d2731;
+$white: #f4f4f4;
+$gray: #d9d9d9;
 $grayHsla: hsla(0, 0%, 85%, 0.75);
 $darkGray: #696969;
-$red: #CD5C5C;
+$red: #cd5c5c;
 
 // typefaces
-$serif: 'Merriweather', serif;
+$serif: 'Lora', serif;
 $sansSerif: 'Montserrat', sans-serif;
-$cursive:'Shadows Into Light', cursive;
+$cursive: 'Shadows Into Light', cursive;
 
 // transition
 $transition: 0.5s ease-in-out;
@@ -19,28 +19,28 @@ $transition: 0.5s ease-in-out;
 // Variables for media query
 $bp-sm: 768px;
 $bp-md: 960px;
-$bp-lg: 1150px; 
-$bp-xlg: 1420px; 
+$bp-lg: 1150px;
+$bp-xlg: 1420px;
 
 // Mixin for media query
 @mixin bp($class) {
   @if $class == sm {
-    @media (min-width: $bp-sm) { @content; }
-  }
- 
-  @else if $class == md {
-    @media (min-width: $bp-md) { @content; }
-  }
- 
-  @else if $class == lg {
-    @media (min-width: $bp-lg) { @content; }
-  }
-
-  @else if $class == xlg {
-    @media (min-width: $bp-xlg) { @content; }
-  }
-
-  @else {
+    @media (min-width: $bp-sm) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: $bp-md) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: $bp-lg) {
+      @content;
+    }
+  } @else if $class == xlg {
+    @media (min-width: $bp-xlg) {
+      @content;
+    }
+  } @else {
     @warn "Breakpoint mixin supports: sm, md, lg, xlg";
   }
 }
@@ -48,11 +48,10 @@ $bp-xlg: 1420px;
 // height media query
 @mixin hbp($class) {
   @if $class == sm {
-    @media (min-height: 1100px) { @content; }
-  }
-
-  @else {
+    @media (min-height: 1100px) {
+      @content;
+    }
+  } @else {
     @warn "Breakpoint mixin for height supports: sm";
   }
-    
 }

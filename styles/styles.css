@@ -173,7 +173,7 @@ textarea {
   overflow: hidden; }
 
 body {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   margin: 0; }
   @media (min-width: 960px) {
     body {
@@ -214,7 +214,7 @@ textarea:focus {
   display: none; }
   @media (min-width: 960px) {
     .leftContainer {
-      background-color: #D9D9D9;
+      background-color: #d9d9d9;
       display: flex;
       flex-basis: 17%; } }
 
@@ -261,7 +261,7 @@ li {
   cursor: pointer; }
 
 .close {
-  color: #F4F4F4; }
+  color: #f4f4f4; }
 
 .hamburger:hover,
 .hamburger:focus {
@@ -307,7 +307,7 @@ li {
 .socialMedia a:active,
 .links a:active,
 input[type=submit]:active {
-  background-color: #D9D9D9; }
+  background-color: #d9d9d9; }
 
 input[type=submit] {
   display: block;
@@ -323,7 +323,7 @@ input[type=submit] {
 body,
 a {
   font-size: 125%;
-  color: #1D2731;
+  color: #1d2731;
   letter-spacing: 1px; }
 
 h1,
@@ -411,7 +411,7 @@ p {
 .subTitle {
   margin: 5px 0;
   font-size: 0.8rem;
-  font-family: "Merriweather", serif;
+  font-family: "Lora", serif;
   font-style: italic; }
   @media (min-width: 960px) {
     .subTitle {
@@ -421,7 +421,7 @@ p {
 a,
 input[type=submit] {
   text-decoration: none;
-  color: #1D2731;
+  color: #1d2731;
   text-align: center;
   font-weight: 600; }
   @media (min-width: 960px) {
@@ -441,7 +441,7 @@ input[type=submit] {
   font-family: "Shadows Into Light", cursive;
   font-size: 2.1rem;
   line-height: 1.0;
-  color: #1D2731; }
+  color: #1d2731; }
   @media (min-width: 768px) {
     .dev {
       font-size: 2.2rem; } }
@@ -497,7 +497,7 @@ header {
   width: 25px;
   height: 3px;
   margin: 5px 0;
-  background-color: #1D2731; }
+  background-color: #1d2731; }
 
 .close {
   font-size: 2.0rem;
@@ -527,8 +527,8 @@ header {
     height: 80vh; } }
 
 .navContainer {
-  background-color: #1D2731;
-  color: #F4F4F4;
+  background-color: #1d2731;
+  color: #f4f4f4;
   width: 100%;
   position: absolute;
   top: 0;
@@ -569,10 +569,10 @@ header {
         width: 100%;
         position: relative; } }
   .topNavList a {
-    color: #F4F4F4; }
+    color: #f4f4f4; }
     @media (min-width: 960px) {
       .topNavList a {
-        color: #1D2731; } }
+        color: #1d2731; } }
   @media (min-width: 960px) {
     .topNavList .logo {
       display: none; } }
@@ -625,7 +625,7 @@ header {
     background-color: #696969; }
   .topNavList li:active a,
   .socialMedia a:active a {
-    color: #F4F4F4;
+    color: #f4f4f4;
     font-weight: normal; }
 
 .headerContainer {
@@ -690,7 +690,7 @@ h1,
       grid-column: 2/ span 4; } }
 
 .myPhoto {
-  border: 10px solid #D9D9D9;
+  border: 10px solid #d9d9d9;
   grid-row: 1 /span 6;
   grid-column: 1 / 3;
   justify-self: end;
@@ -829,7 +829,7 @@ h1,
   margin-top: 10px; }
 
 .friend:hover {
-  color: #1D2731;
+  color: #1d2731;
   font-weight: 600; }
 
 .skillIcons {
@@ -843,22 +843,31 @@ h1,
   @media (min-width: 960px) {
     .skillIcons {
       margin-top: 70px; } }
+  .skillIcons li {
+    margin-bottom: 20px; }
+  .skillIcons i {
+    font-size: 3rem; }
   .skillIcons i,
-  .skillIcons .firebase {
+  .skillIcons .firebase,
+  .skillIcons .nextjs,
+  .skillIcons .gitLab,
+  .skillIcons .jest {
     width: 70px;
     height: 70px;
     margin: 10px auto;
-    font-size: 4.0rem;
     text-align: center; }
     @media (min-width: 768px) {
       .skillIcons i,
-      .skillIcons .firebase {
+      .skillIcons .firebase,
+      .skillIcons .nextjs,
+      .skillIcons .gitLab,
+      .skillIcons .jest {
         font-size: 4.8rem;
         margin: 20px auto; } }
 
 .firebase {
   position: relative;
-  background-color: #1D2731;
+  background-color: #1d2731;
   padding: 3px; }
   .firebase img {
     width: 90%;
@@ -925,7 +934,7 @@ input[type=textarea] {
   margin: 5px 0;
   padding: 3px 5px;
   position: relative;
-  color: #CD5C5C; }
+  color: #cd5c5c; }
 
 footer p {
   text-align: right;
